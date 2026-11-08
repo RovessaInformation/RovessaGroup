@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Grup Seleksi - Rovessa</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #04152e, #075985, #0284c7);
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #7dd3fc;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #dbeafe;
+    font-size: 14px;
+}
+
+/* STATUS OPEN / CLOSE */
+.status-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.status {
+    padding: 13px 50px;
+    border-radius: 30px;
+    font-size: 21px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* WARNA OPEN */
+.status.open {
+    background: #16a34a;
+    box-shadow: 0 0 18px #16a34a;
+}
+
+/* WARNA CLOSE */
+.status.close {
+    background: #dc2626;
+    box-shadow: 0 0 18px #dc2626;
+}
+
+/* KARTU GRUP */
+.group-card {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 15px;
+    padding: 25px 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.group-card h2 {
+    color: #7dd3fc;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.group-card p {
+    font-size: 14px;
+    color: #e0f2fe;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.group-link {
+    display: inline-block;
+    text-decoration: none;
+    background: #0284c7;
+    color: white;
+    padding: 13px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.group-link:hover {
+    background: #0ea5e9;
+    transform: scale(1.04);
+}
+
+.back {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: #bae6fd;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 12px;
+    color: #bae6fd;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+    <h1>GRUP SELEKSI</h1>
+    <p>ROVESSA TRIJAYA COMPANY</p>
+</header>
+
+<!-- GANTI OPEN MENJADI CLOSE UNTUK MENUTUP PENDAFTARAN -->
+<div class="status-container">
+    <div id="statusPendaftaran" class="status open">
+        OPEN
+    </div>
+</div>
+
+<div class="group-card">
+    <h2>GRUP SELEKSI</h2>
+
+    <p>
+        Selamat datang di grup seleksi Rovessa Trijaya Company.
+        Silakan bergabung melalui tombol di bawah ini.
+    </p>
+
+    <a
+        class="group-link"
+        href=""
+        target="_blank"
+        rel="noopener noreferrer">
+        JOIN GROUP WHATSAPP
+    </a>
+</div>
+
+<a href="index.html" class="back">
+    ← Kembali ke Menu Utama
+</a>
+
+<footer>
+    © 2026 Rovessa Trijaya Company
+</footer>
+
+</div>
+
+<script>
+
+/* PENGATURAN STATUS PENDAFTARAN */
+
+// Pilih OPEN atau CLOSE
+const statusPendaftaran = "CLOSE";
+
+const statusElement = document.getElementById("statusPendaftaran");
+
+if (statusPendaftaran.toUpperCase() === "OPEN") {
+
+    statusElement.textContent = "OPEN";
+    statusElement.className = "status open";
+
+} else {
+
+    statusElement.textContent = "CLOSE";
+    statusElement.className = "status close";
+
+}
+
+</script>
+
+</body>
+</html>
