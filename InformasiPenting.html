@@ -1,14 +1,378 @@
-<!DOCTYPE html>
-<html>
 
+<!DOCTYPE html>
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Informasi Penting PO Rovessa</title>
+
+<style>
+
+/* PENGATURAN DASAR */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #04152e, #075985, #0284c7);
+    color: white;
+    min-height: 100vh;
+    padding: 25px 15px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* HEADER */
+
+.header {
+    text-align: center;
+    padding: 30px 15px;
+    margin-bottom: 22px;
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 22px;
+}
+
+.header h1 {
+    color: #7dd3fc;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #bae6fd;
+    font-size: 14px;
+}
+
+/* KARTU INFORMASI */
+
+.card {
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 25px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+    color: #7dd3fc;
+    font-size: 19px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* NAMA PERUSAHAAN */
+
+.company-name {
+    background: rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 22px 15px;
+    text-align: center;
+}
+
+.company-name h3 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.company-name p {
+    color: #7dd3fc;
+    font-size: 14px;
+}
+
+/* DIVISI OPERASIONAL */
+
+.division {
+    background: rgba(255,255,255,0.10);
+    border-left: 4px solid #38bdf8;
+    border-radius: 12px;
+    padding: 17px;
+    margin-bottom: 12px;
+}
+
+.division h3 {
+    color: #7dd3fc;
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+.division p {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* FASILITAS */
+
+.facilities {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.facility {
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 13px;
+    padding: 18px 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.facility span {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 9px;
+}
+
+/* KETERANGAN */
+
+.note {
+    text-align: center;
+    color: #bae6fd;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+/* TOMBOL KEMBALI */
+
+.back {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    padding: 13px 25px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back:hover {
+    background: #2563eb;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    color: #bae6fd;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 400px) {
+
+    .header h1 {
+        font-size: 21px;
+    }
+
+    .card {
+        padding: 20px 14px;
+    }
+
+    .division p {
+        font-size: 13px;
+    }
+
+    .facility {
+        font-size: 12px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
-  
-</body>
 
+<div class="container">
+
+    <!-- HEADER -->
+
+    <section class="header">
+
+        <h1>INFORMASI PENTING</h1>
+
+        <p>
+            Official Information<br>
+            PO. Rovessa Trijaya Company
+        </p>
+
+    </section>
+
+
+    <!-- NAMA PERUSAHAAN -->
+
+    <section class="card">
+
+        <h2>NAMA PERUSAHAAN virtual OTOBUS</h2>
+
+        <div class="company-name">
+
+            <h3>Rovessa Trijaya Company</h3>
+
+            <p>
+                RTC (Rovessa Trijaya Company)
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- DIVISI OPERASIONAL -->
+
+    <section class="card">
+
+        <h2>DIVISI OPERASIONAL</h2>
+
+        <div class="division">
+
+            <h3>01. AKAP</h3>
+
+            <p>
+                Antar Kota Antar Provinsi<br>
+                <b>Java Adventure</b>
+            </p>
+
+        </div>
+
+        <div class="division">
+
+            <h3>02. AKDP</h3>
+
+            <p>
+                Antar Kota Dalam Provinsi<br>
+                <b>Adhipura Lines</b>
+            </p>
+
+        </div>
+
+        <div class="division">
+
+            <h3>03. PARIWISATA</h3>
+
+            <p>
+                <b>Rovessa Trijaya</b>
+            </p>
+
+        </div>
+
+        <div class="division">
+
+            <h3>04. LOGISTIK / EKSPEDISI</h3>
+
+            <p>
+                <b>Ertece.co</b>
+            </p>
+
+        </div>
+
+        <div class="division">
+
+            <h3>05. PATAS</h3>
+
+            <p>
+                Cepat Terbatas<br>
+                <b>Javina Rahayu</b>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FASILITAS DAN LAYANAN -->
+
+    <section class="card">
+
+        <h2>FASILITAS DAN LAYANAN</h2>
+
+        <div class="facilities">
+
+            <div class="facility">
+                <span>❄️</span>
+                AC
+            </div>
+
+            <div class="facility">
+                <span>📶</span>
+                Wi-Fi
+            </div>
+
+            <div class="facility">
+                <span>🚻</span>
+                Toilet
+            </div>
+
+            <div class="facility">
+                <span>🍪</span>
+                Snack
+            </div>
+
+            <div class="facility">
+                <span>🛏️</span>
+                Sleeper Seat
+            </div>
+
+            <div class="facility">
+                <span>✨</span>
+                Fasilitas Lainnya
+            </div>
+
+        </div>
+
+        <div class="note">
+
+            Dan berbagai fasilitas penunjang
+            kenyamanan lainnya.
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <a href="index.html" class="back">
+        ← Kembali ke Menu Utama
+    </a>
+
+    <div class="footer">
+
+        <b>PO. ROVESSA TRIJAYA</b>
+
+        <br>
+
+        Rovessa Trijaya Company (RTC)
+
+        <br>
+
+        © 2026 All Rights Reserved.
+
+    </div>
+
+</div>
+
+</body>
 </html>
