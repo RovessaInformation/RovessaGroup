@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Customer Service PO Rovessa</title>
+<title>Customer Service - PO Rovessa</title>
 
 <style>
 * {
@@ -16,125 +16,90 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #f1f4fa;
-    color: #202b40;
-    padding: 20px 12px;
+    background: linear-gradient(135deg, #04152e, #075985, #0284c7);
+    color: white;
+    min-height: 100vh;
+    padding: 25px 15px;
 }
 
 .container {
-    max-width: 750px;
-    margin: 25px auto;
-    background: white;
-    padding: 30px 20px;
-    border-radius: 25px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+    max-width: 600px;
+    margin: auto;
 }
 
-.header {
+header {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.header h1 {
-    color: #2860e8;
+header h1 {
+    color: #7dd3fc;
     font-size: 25px;
     margin-bottom: 10px;
 }
 
-.header p {
-    color: #8490a3;
+header p {
+    color: #dbeafe;
+    font-size: 14px;
+}
+
+.card {
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 16px;
+    padding: 25px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #dbeafe;
     font-size: 14px;
     line-height: 1.6;
+    margin-bottom: 20px;
 }
 
-.cs-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 20px 15px;
-    margin-bottom: 15px;
-    background: #f1f4fa;
-    border-radius: 15px;
-    border-left: 5px solid #20bd69;
-}
-
-.info h3 {
-    font-size: 16px;
-    margin-bottom: 8px;
-}
-
-.info p {
-    font-size: 14px;
-    color: #65738a;
-}
-
-.contact-button {
-    background: #20bd69;
+.btn {
+    display: block;
+    background: #111827;
     color: white;
     text-decoration: none;
-    padding: 12px 17px;
-    border-radius: 12px;
-    font-size: 13px;
+    padding: 14px;
+    border-radius: 10px;
     font-weight: bold;
-    white-space: nowrap;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
-.contact-button:hover {
-    background: #159c54;
-    transform: translateY(-2px);
-}
-
-.message {
-    background: #eef3ff;
-    color: #2860e8;
-    padding: 18px;
-    border-radius: 13px;
-    margin-top: 25px;
-    text-align: center;
-    font-size: 14px;
-    line-height: 1.6;
+.btn:hover {
+    background: #374151;
 }
 
 .back {
     display: block;
-    width: fit-content;
-    margin: 25px auto 0;
-    padding: 13px 25px;
-    background: #eef2fa;
-    color: #2860e8;
+    text-align: center;
+    color: #7dd3fc;
     text-decoration: none;
-    border-radius: 12px;
     font-weight: bold;
+    margin-top: 25px;
 }
 
-.back:hover {
-    background: #2860e8;
-    color: white;
-}
-
-@media(max-width: 450px) {
-    .container {
-        padding: 23px 13px;
-    }
-
-    .cs-card {
-        padding: 16px 10px;
-    }
-
-    .info h3 {
-        font-size: 14px;
-    }
-
-    .info p {
-        font-size: 12px;
-    }
-
-    .contact-button {
-        padding: 11px 12px;
-        font-size: 12px;
-    }
+footer {
+    text-align: center;
+    color: #bfdbfe;
+    font-size: 12px;
+    margin-top: 30px;
 }
 </style>
 </head>
@@ -143,80 +108,41 @@ body {
 
 <div class="container">
 
-    <div class="header">
-        <h1>CUSTOMER SERVICE</h1>
-        <p>
-            PO ROVESSA<br>
-            Hubungi admin kami melalui WhatsApp
-        </p>
-    </div>
+<header>
+    <h1>CUSTOMER SERVICE</h1>
+    <p>PO. ROVESSA TRIJAYA COMPANY</p>
+</header>
 
-    <!-- ADMIN 1 -->
-    <div class="cs-card">
-        <div class="info">
-            <h3>Customer Service 01</h3>
-            <p>0814-0058-5493</p>
-        </div>
+<div class="card">
 
-        <a class="contact-button"
-        href="https://wa.me/6281400585493?text=Assalamu%27alaikum%20min%2C%20Saya%20ingin%20bertanya"
-        target="_blank" rel="noopener noreferrer">
-        WhatsApp ↗
-        </a>
-    </div>
+    <div class="icon">🎵</div>
 
-    <!-- ADMIN 2 -->
-    <div class="cs-card">
-        <div class="info">
-            <h3>Customer Service 02</h3>
-            <p>0821-1311-3192</p>
-        </div>
+    <h2>Customer Service Official</h2>
 
-        <a class="contact-button"
-        href="https://wa.me/6282113113192?text=Assalamu%27alaikum%20min%2C%20Saya%20ingin%20bertanya"
-        target="_blank" rel="noopener noreferrer">
-        WhatsApp ↗
-        </a>
-    </div>
+    <p>
+        Untuk pertanyaan, informasi, kerja sama,
+        maupun keperluan lainnya, silakan hubungi
+        Customer Service melalui akun TikTok resmi
+        Rovessa Trijaya Company.
+    </p>
 
-    <!-- ADMIN 3 -->
-    <div class="cs-card">
-        <div class="info">
-            <h3>Customer Service 03</h3>
-            <p>0877-6378-9262</p>
-        </div>
-
-        <a class="contact-button"
-        href="https://wa.me/6287763789262?text=Assalamu%27alaikum%20min%2C%20Saya%20ingin%20bertanya"
-        target="_blank" rel="noopener noreferrer">
-        WhatsApp ↗
-        </a>
-    </div>
-
-    <!-- ADMIN 4 -->
-    <div class="cs-card">
-        <div class="info">
-            <h3>Customer Service 04</h3>
-            <p>0882-3049-3263</p>
-        </div>
-
-        <a class="contact-button"
-        href="https://wa.me/6288230493263?text=Assalamu%27alaikum%20min%2C%20Saya%20ingin%20bertanya"
-        target="_blank" rel="noopener noreferrer">
-        WhatsApp ↗
-        </a>
-    </div>
-
-    <div class="message">
-        <b>Pesan Otomatis:</b><br>
-        Assalamu'alaikum min, Saya ingin bertanya
-    </div>
-    
-    </div>DILARANG SPAM DAN TELEPON (tanpa terkecuali)</div>
-
-    <a href="index.html" class="back">
-        ← Kembali ke Menu Utama
+    <a
+        class="btn"
+        href="https://www.tiktok.com/@akunresmi.erteceholiday?_r=1&_t=ZS-99k7alX4tKi"
+        target="_blank"
+        rel="noopener noreferrer">
+        KUNJUNGI TIKTOK OFFICIAL
     </a>
+
+</div>
+
+<a href="index.html" class="back">
+    ← Kembali ke Halaman Utama
+</a>
+
+<footer>
+    © 2026 Rovessa Trijaya Company
+</footer>
 
 </div>
 
