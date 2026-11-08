@@ -16,117 +16,117 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #f1f4fa;
-    color: #202b40;
+    background: linear-gradient(135deg, #04152e, #075985, #0284c7);
+    color: white;
     padding: 20px 12px;
 }
 
 .container {
-    max-width: 850px;
-    margin: 20px auto;
-    background: white;
-    padding: 25px 15px;
-    border-radius: 25px;
+    max-width: 750px;
+    margin: auto;
 }
 
-.header {
+header {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
-.header h1 {
-    color: #2860e8;
+header h1 {
+    color: #7dd3fc;
     font-size: 25px;
     margin-bottom: 8px;
 }
 
-.header p {
-    color: #8490a3;
-    font-size: 14px;
+header p {
+    color: #dbeafe;
+    font-size: 13px;
 }
 
-/* GALERI 2 KOLOM */
+/* PERINGATAN */
+.warning {
+    background: #991b1b;
+    border: 2px solid #fca5a5;
+    color: white;
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
 
+/* GALERI */
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 13px;
+    gap: 12px;
 }
 
-.photo {
-    overflow: hidden;
-    border-radius: 14px;
-    background: #eef1f7;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+.photo-card {
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 7px;
 }
 
-.photo img {
+.photo-card img {
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
     display: block;
+    border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-.photo img:active {
-    transform: scale(0.96);
-}
-
-.caption {
-    padding: 10px 5px;
+.photo-card p {
     text-align: center;
-    font-size: 13px;
-    font-weight: bold;
+    font-size: 12px;
+    color: #dbeafe;
+    padding: 9px 2px 4px;
 }
 
-/* FOTO MEMBESAR */
-
-.viewer {
+/* FOTO BESAR */
+.lightbox {
     display: none;
     position: fixed;
-    z-index: 9999;
+    z-index: 999;
     inset: 0;
     background: rgba(0,0,0,0.95);
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 20px;
 }
 
-.viewer img {
+.lightbox img {
     max-width: 100%;
     max-height: 85vh;
     object-fit: contain;
-    border-radius: 8px;
 }
 
 .close {
     position: absolute;
     top: 15px;
     right: 22px;
+    font-size: 38px;
     color: white;
-    font-size: 40px;
     cursor: pointer;
-    z-index: 10000;
 }
-
-/* TOMBOL KEMBALI */
 
 .back {
     display: block;
-    width: fit-content;
-    margin: 30px auto 0;
-    padding: 13px 25px;
-    background: #eef2fa;
-    color: #2860e8;
+    text-align: center;
+    color: #7dd3fc;
     text-decoration: none;
-    border-radius: 12px;
     font-weight: bold;
+    margin-top: 25px;
 }
 
-.back:hover {
-    background: #2860e8;
-    color: white;
+footer {
+    text-align: center;
+    color: #bfdbfe;
+    font-size: 12px;
+    margin-top: 25px;
 }
 </style>
 </head>
@@ -135,106 +135,345 @@ body {
 
 <div class="container">
 
-    <div class="header">
-        <h1>GALERI PO ROVESSA</h1>
-        <p>Kumpulan Dokumentasi dan Foto Armada</p>
-    </div>
+<header>
+    <h1>🚌 GALERI PO ROVESSA x JavaAdvant</h1>
+    <p>Dokumentasi Lengkapnya</p>
+</header>
 
-    <div class="gallery">
+<div class="warning">
+    ⚠️ PERINGATAN!<br>
+    Dilarang Mengambil Foto Atau Mengaku-ngaku Foto Yang BUKAN Milik Anda
+</div>
 
-        <div class="photo">
-            <img src="Bus1.jpg" onclick="showPhoto(this)">
-            <div class="caption">Dokumentasi 01</div>
-        </div>
+<div class="gallery">
 
-        <div class="photo">
-            <img src="foto2.jpg" onclick="showPhoto(this)">
-            <div class="caption">Dokumentasi 02</div>
-        </div>
+<!-- FOTO 01 -->
+<div class="photo-card">
+    <img src="fotobus1.jpg" alt="Foto 01" onclick="showPhoto(this)">
+    <p>Dokumentasi 01</p>
+</div>
 
-        <div class="photo">
-            <img src="foto3.jpg" onclick="showPhoto(this)">
-            <div class="caption">Dokumentasi 03</div>
-        </div>
+<!-- FOTO 02 -->
+<div class="photo-card">
+    <img src="fotobus2.jpg" alt="Foto 02" onclick="showPhoto(this)">
+    <p>Dokumentasi 02</p>
+</div>
 
-        <div class="photo">
-            <img src="foto4.jpg" onclick="showPhoto(this)">
-            <div class="caption">Dokumentasi 04</div>
-        </div>
+<!-- FOTO 03 -->
+<div class="photo-card">
+    <img src="fotobus3.jpg" alt="Foto 03" onclick="showPhoto(this)">
+    <p>Dokumentasi 03</p>
+</div>
 
-        <div class="photo">
-            <img src="foto5.jpg" onclick="showPhoto(this)">
-            <div class="caption">Dokumentasi 05</div>
-        </div>
+<!-- FOTO 04 -->
+<div class="photo-card">
+    <img src="fotobus4.jpg" alt="Foto 04" onclick="showPhoto(this)">
+    <p>Dokumentasi 04</p>
+</div>
 
-        <div class="photo">
-            <img src="foto6.jpg" onclick="showPhoto(this)">
-            <div class="caption">Dokumentasi 06</div>
-        </div>
+<!-- FOTO 05 -->
+<div class="photo-card">
+    <img src="fotobus5.jpg" alt="Foto 05" onclick="showPhoto(this)">
+    <p>Dokumentasi 05</p>
+</div>
 
-        <div class="photo">
-            <img src="foto7.jpg" onclick="showPhoto(this)">
-            <div class="caption">Dokumentasi 07</div>
-        </div>
+<!-- FOTO 06 -->
+<div class="photo-card">
+    <img src="fotobus6.png" alt="Foto 06" onclick="showPhoto(this)">
+    <p>Dokumentasi 06</p>
+</div>
 
-        <div class="photo">
-            <img src="foto8.jpg" onclick="showPhoto(this)">
-            <div class="caption">Dokumentasi 08</div>
-        </div>
+<!-- FOTO 07 -->
+<div class="photo-card">
+    <img src="fotobus7.jpg" alt="Foto 07" onclick="showPhoto(this)">
+    <p>Dokumentasi 07</p>
+</div>
 
-        <div class="photo">
-            <img src="foto9.jpg" onclick="showPhoto(this)">
-            <div class="caption">Dokumentasi 09</div>
-        </div>
+<!-- FOTO 08 -->
+<div class="photo-card">
+    <img src="fotobus8.jpg" alt="Foto 08" onclick="showPhoto(this)">
+    <p>Dokumentasi 08</p>
+</div>
 
-        <div class="photo">
-            <img src="foto10.jpg" onclick="showPhoto(this)">
-            <div class="caption">Dokumentasi 10</div>
-        </div>
+<!-- FOTO 09 -->
+<div class="photo-card">
+    <img src="fotobus9.jpg" alt="Foto 09" onclick="showPhoto(this)">
+    <p>Dokumentasi 09</p>
+</div>
 
-        <div class="photo">
-            <img src="foto11.jpg" onclick="showPhoto(this)">
-            <div class="caption">Dokumentasi 11</div>
-        </div>
+<!-- FOTO 10 -->
+<div class="photo-card">
+    <img src="fotobus10.jpg" alt="Foto 10" onclick="showPhoto(this)">
+    <p>Dokumentasi 10</p>
+</div>
 
-        <div class="photo">
-            <img src="foto12.jpg" onclick="showPhoto(this)">
-            <div class="caption">Dokumentasi 12</div>
-        </div>
+<!-- FOTO 11 -->
+<div class="photo-card">
+    <img src="fotobus11.jpg" alt="Foto 11" onclick="showPhoto(this)">
+    <p>Dokumentasi 11</p>
+</div>
 
-    </div>
+<!-- FOTO 12 -->
+<div class="photo-card">
+    <img src="fotobus12.jpg" alt="Foto 12" onclick="showPhoto(this)">
+    <p>Dokumentasi 12</p>
+</div>
 
-    <a href="index.html" class="back">
-        ← Kembali ke Menu Utama
-    </a>
+<!-- FOTO 13 -->
+<div class="photo-card">
+    <img src="fotobus13.jpg" alt="Foto 13" onclick="showPhoto(this)">
+    <p>Dokumentasi 13</p>
+</div>
+
+<!-- FOTO 14 -->
+<div class="photo-card">
+    <img src="fotobus14.jpg" alt="Foto 14" onclick="showPhoto(this)">
+    <p>Dokumentasi 14</p>
+</div>
+
+<!-- FOTO 15 -->
+<div class="photo-card">
+    <img src="fotobus15.jpg" alt="Foto 15" onclick="showPhoto(this)">
+    <p>Dokumentasi 15</p>
+</div>
+
+<!-- FOTO 16 -->
+<div class="photo-card">
+    <img src="foto16.jpg" alt="Foto 16" onclick="showPhoto(this)">
+    <p>Dokumentasi 16</p>
+</div>
+
+<!-- FOTO 17 -->
+<div class="photo-card">
+    <img src="foto17.jpg" alt="Foto 17" onclick="showPhoto(this)">
+    <p>Dokumentasi 17</p>
+</div>
+
+<!-- FOTO 18 -->
+<div class="photo-card">
+    <img src="foto18.jpg" alt="Foto 18" onclick="showPhoto(this)">
+    <p>Dokumentasi 18</p>
+</div>
+
+<!-- FOTO 19 -->
+<div class="photo-card">
+    <img src="foto19.jpg" alt="Foto 19" onclick="showPhoto(this)">
+    <p>Dokumentasi 19</p>
+</div>
+
+<!-- FOTO 20 -->
+<div class="photo-card">
+    <img src="foto20.jpg" alt="Foto 20" onclick="showPhoto(this)">
+    <p>Dokumentasi 20</p>
+</div>
+
+<!-- FOTO 21 -->
+<div class="photo-card">
+    <img src="foto21.jpg" alt="Foto 21" onclick="showPhoto(this)">
+    <p>Dokumentasi 21</p>
+</div>
+
+<!-- FOTO 22 -->
+<div class="photo-card">
+    <img src="foto22.jpg" alt="Foto 22" onclick="showPhoto(this)">
+    <p>Dokumentasi 22</p>
+</div>
+
+<!-- FOTO 23 -->
+<div class="photo-card">
+    <img src="foto23.jpg" alt="Foto 23" onclick="showPhoto(this)">
+    <p>Dokumentasi 23</p>
+</div>
+
+<!-- FOTO 24 -->
+<div class="photo-card">
+    <img src="foto24.jpg" alt="Foto 24" onclick="showPhoto(this)">
+    <p>Dokumentasi 24</p>
+</div>
+
+<!-- FOTO 25 -->
+<div class="photo-card">
+    <img src="foto25.jpg" alt="Foto 25" onclick="showPhoto(this)">
+    <p>Dokumentasi 25</p>
+</div>
+
+<!-- FOTO 26 -->
+<div class="photo-card">
+    <img src="foto26.jpg" alt="Foto 26" onclick="showPhoto(this)">
+    <p>Dokumentasi 26</p>
+</div>
+
+<!-- FOTO 27 -->
+<div class="photo-card">
+    <img src="foto27.jpg" alt="Foto 27" onclick="showPhoto(this)">
+    <p>Dokumentasi 27</p>
+</div>
+
+<!-- FOTO 28 -->
+<div class="photo-card">
+    <img src="foto28.jpg" alt="Foto 28" onclick="showPhoto(this)">
+    <p>Dokumentasi 28</p>
+</div>
+
+<!-- FOTO 29 -->
+<div class="photo-card">
+    <img src="foto29.jpg" alt="Foto 29" onclick="showPhoto(this)">
+    <p>Dokumentasi 29</p>
+</div>
+
+<!-- FOTO 30 -->
+<div class="photo-card">
+    <img src="foto30.jpg" alt="Foto 30" onclick="showPhoto(this)">
+    <p>Dokumentasi 30</p>
+</div>
+
+<!-- FOTO 31 -->
+<div class="photo-card">
+    <img src="foto31.jpg" alt="Foto 31" onclick="showPhoto(this)">
+    <p>Dokumentasi 31</p>
+</div>
+
+<!-- FOTO 32 -->
+<div class="photo-card">
+    <img src="foto32.jpg" alt="Foto 32" onclick="showPhoto(this)">
+    <p>Dokumentasi 32</p>
+</div>
+
+<!-- FOTO 33 -->
+<div class="photo-card">
+    <img src="foto33.jpg" alt="Foto 33" onclick="showPhoto(this)">
+    <p>Dokumentasi 33</p>
+</div>
+
+<!-- FOTO 34 -->
+<div class="photo-card">
+    <img src="foto34.jpg" alt="Foto 34" onclick="showPhoto(this)">
+    <p>Dokumentasi 34</p>
+</div>
+
+<!-- FOTO 35 -->
+<div class="photo-card">
+    <img src="foto35.jpg" alt="Foto 35" onclick="showPhoto(this)">
+    <p>Dokumentasi 35</p>
+</div>
+
+<!-- FOTO 36 -->
+<div class="photo-card">
+    <img src="foto36.jpg" alt="Foto 36" onclick="showPhoto(this)">
+    <p>Dokumentasi 36</p>
+</div>
+
+<!-- FOTO 37 -->
+<div class="photo-card">
+    <img src="foto37.jpg" alt="Foto 37" onclick="showPhoto(this)">
+    <p>Dokumentasi 37</p>
+</div>
+
+<!-- FOTO 38 -->
+<div class="photo-card">
+    <img src="foto38.jpg" alt="Foto 38" onclick="showPhoto(this)">
+    <p>Dokumentasi 38</p>
+</div>
+
+<!-- FOTO 39 -->
+<div class="photo-card">
+    <img src="foto39.jpg" alt="Foto 39" onclick="showPhoto(this)">
+    <p>Dokumentasi 39</p>
+</div>
+
+<!-- FOTO 40 -->
+<div class="photo-card">
+    <img src="foto40.jpg" alt="Foto 40" onclick="showPhoto(this)">
+    <p>Dokumentasi 40</p>
+</div>
+
+<!-- FOTO 41 -->
+<div class="photo-card">
+    <img src="foto41.jpg" alt="Foto 41" onclick="showPhoto(this)">
+    <p>Dokumentasi 41</p>
+</div>
+
+<!-- FOTO 42 -->
+<div class="photo-card">
+    <img src="foto42.jpg" alt="Foto 42" onclick="showPhoto(this)">
+    <p>Dokumentasi 42</p>
+</div>
+
+<!-- FOTO 43 -->
+<div class="photo-card">
+    <img src="foto43.jpg" alt="Foto 43" onclick="showPhoto(this)">
+    <p>Dokumentasi 43</p>
+</div>
+
+<!-- FOTO 44 -->
+<div class="photo-card">
+    <img src="foto44.jpg" alt="Foto 44" onclick="showPhoto(this)">
+    <p>Dokumentasi 44</p>
+</div>
+
+<!-- FOTO 45 -->
+<div class="photo-card">
+    <img src="foto45.jpg" alt="Foto 45" onclick="showPhoto(this)">
+    <p>Dokumentasi 45</p>
+</div>
+
+<!-- FOTO 46 -->
+<div class="photo-card">
+    <img src="foto46.jpg" alt="Foto 46" onclick="showPhoto(this)">
+    <p>Dokumentasi 46</p>
+</div>
+
+<!-- FOTO 47 -->
+<div class="photo-card">
+    <img src="foto47.jpg" alt="Foto 47" onclick="showPhoto(this)">
+    <p>Dokumentasi 47</p>
+</div>
+
+<!-- FOTO 48 -->
+<div class="photo-card">
+    <img src="foto48.jpg" alt="Foto 48" onclick="showPhoto(this)">
+    <p>Dokumentasi 48</p>
+</div>
+
+<!-- FOTO 49 -->
+<div class="photo-card">
+    <img src="foto49.jpg" alt="Foto 49" onclick="showPhoto(this)">
+    <p>Dokumentasi 49</p>
+</div>
+
+<!-- FOTO 50 -->
+<div class="photo-card">
+    <img src="foto50.jpg" alt="Foto 50" onclick="showPhoto(this)">
+    <p>Dokumentasi 50</p>
+</div>
 
 </div>
 
-<!-- PEMBESAR FOTO -->
+<div class="lightbox" id="lightbox" onclick="closePhoto()">
+    <span class="close" onclick="closePhoto()">×</span>
+    <img id="lightboxImage" src="" alt="Foto diperbesar">
+</div>
 
-<div class="viewer" id="viewer" onclick="closePhoto()">
+<a href="index.html" class="back">
+    ← Kembali ke Halaman Utama
+</a>
 
-    <span class="close">&times;</span>
-
-    <img id="largePhoto" src="" alt="Foto Galeri">
+<footer>
+    © 2026 Rovessa Trijaya Company
+</footer>
 
 </div>
 
 <script>
-
 function showPhoto(img) {
-    const viewer = document.getElementById("viewer");
-    const largePhoto = document.getElementById("largePhoto");
-
-    largePhoto.src = img.src;
-    viewer.style.display = "flex";
+    document.getElementById("lightboxImage").src = img.src;
+    document.getElementById("lightbox").style.display = "flex";
 }
 
 function closePhoto() {
-    document.getElementById("viewer").style.display = "none";
-    document.getElementById("largePhoto").src = "";
+    document.getElementById("lightbox").style.display = "none";
+    document.getElementById("lightboxImage").src = "";
 }
-
 </script>
 
 </body>
